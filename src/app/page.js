@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation';
 
 export default function Home() {
   
-  redirect('https://supanova.music/social');
+  redirect('https://supanova.quest/social');
 
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 
@@ -34,7 +34,7 @@ export default function Home() {
             </p>
 
             <p className="mt-4 text-sm text-gray-500">
-                In the meantime, check out my <a href="https://supanova.music/social" className="text-pink-500 hover:text-pink-600 font-semibold underline">social media here</a>!
+                In the meantime, check out my <a href="https://supanova.quest/social" className="text-pink-500 hover:text-pink-600 font-semibold underline">social media here</a>!
             </p>
 
         </div>
