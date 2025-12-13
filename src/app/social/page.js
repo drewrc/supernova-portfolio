@@ -101,6 +101,7 @@ const links = [
   { text: 'Soundcloud', url: 'https://soundcloud.com/supanovasounds', icon: 'soundcloud-black.png', alt: 'Soundcloud'},
   { text: 'Instagram', url: 'https://www.instagram.com/supanova.music/', icon: 'ig-black.svg', alt: 'Instagram' },
   { text: 'Facebook', url: 'https://www.facebook.com/people/Supanova/61582109542271/', icon: 'fb-blue.png', alt: 'Facebook' },
+  { text: 'Back to Home', url: 'https://supanova.music/', icon: 'supanova-logo.png', alt: 'Home' },
 ];
 
 // ... rest of the file ...
@@ -115,8 +116,10 @@ const Socials = () => {
 
       {/* Profile Section */}
       <Image
-        src="pfp.jpg" 
+        src="/pfp.jpg" 
         alt="@supanova"
+        width={100}
+        height={100}
         style={styles.profileImage}
       />
       <h1 style={styles.username}>@SUPANOVA</h1>
@@ -124,7 +127,7 @@ const Socials = () => {
         Producer
       </p>
       <p style={styles.description}>
-       ✨ Radiate Positivity ✨
+        ✨ alchemist of sound ✨
       </p>
 
       {/* Links Section */}
@@ -141,11 +144,13 @@ const Socials = () => {
           >
             <span style={styles.buttonContent}>
 
-                      <Image 
-                        src={link.icon} 
-                        alt={`${link.alt} icon`} 
-                        style={styles.iconImage} // Apply the fixed size and object-fit
-                      />
+                <Image 
+                  src={`/${link.icon}`}  
+                  width={24}          
+                  height={24}  
+                  alt={`${link.alt} icon`} 
+                  style={styles.iconImage} 
+                />
   
               {link.text}
               {/* Optional: Add a small dropdown arrow for Pinterest as in the image */}
