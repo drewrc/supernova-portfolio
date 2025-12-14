@@ -98,7 +98,6 @@ const links = [
   { text: 'Soundcloud', url: 'https://soundcloud.com/supanovasounds', icon: 'soundcloud-black.png', alt: 'Soundcloud'},
   { text: 'Instagram', url: 'https://www.instagram.com/supanova.music/', icon: 'ig-black.svg', alt: 'Instagram' },
   { text: 'Facebook', url: 'https://www.facebook.com/people/Supanova/61582109542271/', icon: 'fb-blue.png', alt: 'Facebook' },
-  { text: 'Back to Home', url: 'https://supanova.music/', icon: 'supanova-logo.png', alt: 'Home' },
 ];
 
 const Socials = () => {
@@ -152,6 +151,29 @@ const Socials = () => {
             </span>
           </a>
         ))}
+         <a
+            key="Back to Home"
+            href="https://supanova.music/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.linkButton}
+            onMouseEnter={(e) => { e.currentTarget.style.transform = styles.linkButtonHover.transform; e.currentTarget.style.boxShadow = styles.linkButtonHover.boxShadow; }}
+            onMouseLeave={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = styles.linkButton.boxShadow; }}
+          >
+            <span style={{ ...styles.buttonContent, gap: '10px' }}>
+              <span
+                style={{
+                  fontSize: '18px',
+                  fontWeight: 'bold',
+                  transform: 'translateY(-1px)',
+                }}
+                aria-hidden="true"
+              >
+                ←
+              </span>
+              Back to Home
+            </span>
+          </a>
       </div>
     </div>
   );
