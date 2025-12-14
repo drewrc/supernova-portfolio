@@ -6,10 +6,10 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans relative overflow-hidden px-safe">
+    <div className="min-h-[100svh] bg-black text-white font-sans relative overflow-hidden px-safe pb-20 md:pb-0">
       
 
-      <header className="flex items-center justify-between px-4 py-4 md:px-8 md:py-6">
+      <header className="flex items-center justify-between px-4 py-4 md:px-8 md:py-6 sticky top-0 bg-black z-40">
         <div className="text-xl font-bold tracking-wide">
            <Link href="/"><img
               src="/supanova-logo.png"
@@ -86,7 +86,7 @@ export default function Home() {
       )}
 
       <main className="px-4 md:px-8">
-        <h1 className="md:mt-24 text-[clamp(4rem,15vw,14rem)] font-extrabold leading-[0.9] tracking-tight">
+        <h1 className="mt-12 md:mt-24  text-[clamp(4rem,15vw,14rem)] font-extrabold leading-[0.9] tracking-tight">
           SUPANOVA <br/> MUSIC
         </h1>
       </main>
