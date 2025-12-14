@@ -7,10 +7,10 @@ export default function Contact() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans relative overflow-hidden px-safe">
+    <div className="min-h-[100svh] bg-black text-white font-sans relative overflow-hidden px-safe pb-20 md:pb-0">
       
 
-      <header className="flex items-center justify-between px-4 py-4 md:px-8 md:py-6">
+      <header className="flex items-center justify-between px-4 py-4 md:px-8 md:py-6 sticky top-0 bg-black z-40">
         <div className="text-xl font-bold tracking-wide">
         <Link href="/"><img
                 src="/supanova-logo.png"

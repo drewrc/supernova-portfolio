@@ -86,7 +86,7 @@ export default function Home() {
       )}
 
       <main className="px-4 md:px-8">
-        <h1 className="mt-12 md:mt-24  text-[clamp(4rem,15vw,14rem)] font-extrabold leading-[0.9] tracking-tight">
+        <h1 className="mt-24  text-[clamp(4rem,15vw,14rem)] font-extrabold leading-[0.9] tracking-tight">
           SUPANOVA <br/> MUSIC
         </h1>
       </main>
