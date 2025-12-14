@@ -1,11 +1,16 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Contact() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className="min-h-screen bg-black text-white font-sans relative overflow-hidden">
+    <div className="min-h-screen bg-black text-white font-sans relative overflow-hidden px-safe">
       
 
-      <header className="flex items-center justify-between px-8 py-6">
+      <header className="flex items-center justify-between px-4 py-4 md:px-8 md:py-6">
         <div className="text-xl font-bold tracking-wide">
         <Link href="/"><img
                 src="/supanova-logo.png"
@@ -13,6 +18,16 @@ export default function Contact() {
                 className="h-14 w-auto"
                 /></Link> 
         </div>
+
+        <button
+          className="md:hidden flex flex-col gap-1.5 focus:outline-none"
+          aria-label="Open menu"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span className="w-6 h-[2px] bg-white"></span>
+          <span className="w-6 h-[2px] bg-white"></span>
+          <span className="w-6 h-[2px] bg-white"></span>
+        </button>
 
         <nav className="hidden md:flex items-center gap-10 text-sm uppercase tracking-widest">
           <a href="https://soundcloud.com/supanovasounds" target="_blank" rel="noopener noreferrer" className="hover:opacity-70">
@@ -30,21 +45,62 @@ export default function Contact() {
         </nav>
       </header>
 
-      <main className="px-8">
-        <h1 className="mt-24 text-[clamp(4rem,15vw,14rem)] font-extrabold leading-[0.9] tracking-tight">
+      {menuOpen && (
+        <div className="md:hidden absolute top-[72px] left-0 w-full bg-black border-t border-white/10 z-50">
+          <nav className="flex flex-col px-6 py-6 gap-6 text-sm uppercase tracking-widest">
+            <a
+              href="https://soundcloud.com/supanovasounds"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-70"
+              onClick={() => setMenuOpen(false)}
+            >
+              Music
+            </a>
+
+            <Link
+              href="/contact"
+              className="hover:opacity-70"
+              onClick={() => setMenuOpen(false)}
+            >
+              Contact
+            </Link>
+
+            <a
+              href="https://calendly.com/supanovamusic/new-meeting"
+              target="_blank"
+              className="hover:opacity-70"
+              onClick={() => setMenuOpen(false)}
+            >
+              Learn
+            </a>
+
+            <Link
+              href="/social"
+              className="hover:opacity-70"
+              onClick={() => setMenuOpen(false)}
+            >
+              Social Media
+            </Link>
+          </nav>
+        </div>
+      )}
+
+      <main className="px-4 md:px-8">
+        <h1 className="mt-12 text-[clamp(4rem,15vw,14rem)] font-extrabold leading-[0.9] tracking-tight">
           CONTACT
         </h1>
 
-        <ul className="mt-16 ml-16 text-white list-none text-left text-lg space-y-4">
+        <ul className="mt-12 ml-4 md:ml-16 wrap-normal text-white list-none text-left text-base md:text-lg space-y-4">
           <li>Inquiries and Booking: supanovasoundz@gmail.com</li>
         </ul>
       </main>
 
-      <div className="absolute bottom-8 left-8 text-xs uppercase tracking-widest opacity-70">
+      <div className="absolute bottom-4 left-4 text-[10px] sm:text-xs uppercase tracking-widest opacity-70 max-w-[60%]">
         Free your mind ✨
       </div>
 
-      <div className="absolute bottom-8 right-8 text-sm uppercase tracking-widest opacity-70">
+      <div className="absolute bottom-4 right-4 text-[10px] sm:text-sm uppercase tracking-widest opacity-70 text-right max-w-[60%]">
         Elevating the next gen of sound
       </div>
     </div>

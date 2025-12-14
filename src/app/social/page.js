@@ -80,33 +80,27 @@ container: {
   
   // CRITICAL: New style object for the icon image
   iconImage: {
-    width: '24px',  // Enforce a fixed small size for consistency
+    width: '24px',  
     height: '24px', 
-    flexShrink: 0,  // Prevents the icon from shrinking on small screens
-    objectFit: 'contain', // Ensures large icons like Facebook scale down properly
+    flexShrink: 0,  
+    objectFit: 'contain', 
   },
   
-  // New style for the link text to push it to the center
   linkText: {
-    flexGrow: 1, // Allows the text container to take up available space
-    textAlign: 'center', // Centers the text within its space
-    paddingRight: '20px', // Balances the left padding
+    flexGrow: 1,
+    textAlign: 'center', 
+    paddingRight: '20px', 
     textAlign: 'center',
   }
 };
 
-// --- Data for the links ---
 const links = [
-  // IMPORTANT: The 'icon' value is now the URL path to the PNG image
   { text: 'Soundcloud', url: 'https://soundcloud.com/supanovasounds', icon: 'soundcloud-black.png', alt: 'Soundcloud'},
   { text: 'Instagram', url: 'https://www.instagram.com/supanova.music/', icon: 'ig-black.svg', alt: 'Instagram' },
   { text: 'Facebook', url: 'https://www.facebook.com/people/Supanova/61582109542271/', icon: 'fb-blue.png', alt: 'Facebook' },
   { text: 'Back to Home', url: 'https://supanova.music/', icon: 'supanova-logo.png', alt: 'Home' },
 ];
 
-// ... rest of the file ...
-
-// --- Main Next.js Component ---
 const Socials = () => {
   return (
     <div style={styles.container}>
