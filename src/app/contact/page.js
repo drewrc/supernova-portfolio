@@ -87,7 +87,7 @@ export default function Contact() {
       )}
 
       <main className="px-4 md:px-8">
-        <h1 className="mt-12 text-[clamp(4rem,15vw,14rem)] font-extrabold leading-[0.9] tracking-tight">
+        <h1 className="md:mt-24  text-[clamp(4rem,15vw,14rem)] font-extrabold leading-[0.9] tracking-tight">
           CONTACT
         </h1>
 
